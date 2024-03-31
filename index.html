@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            body{
+                background-color: #ccccb3;
+            }
+        .product-card{
+            width: 180px;
+            border: 2px double black;
+            padding: 10px 10px 10px 10px;
+            margin: 10px auto;
+            background-color: white;
+            
+        }   
+        .product-image{
+            width: 180px;
+            border-radius: 10px;
+            display: block;
+            justify-content: center;
+        }
+        .product-title{
+            font-size: 20px;
+            margine: 0px 0px 0 0;
+            text-align:start ;
+        }
+        .product-decription{
+            font-size: 12px;
+        
+        
+        }
+        .product-price{
+            font: size 25px;
+            margin-top: 50px;
+        }
+        .product-btn{
+            height:30px;
+            width:80px;
+            justify-content: space-between;
+            border-width:3px;
+            border-style: none;
+            margin-top: 10px;
+            background-color: #99e6ff;
+            margin-left: 5px;
+        }
+        .price{
+            
+        }
+        .guantity-btn-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quantity{
+            font-size: 15px;
+            margin:auto 15px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+  <body>
+    <div class="product-card">
+        <img src="img.png"class="product-image"/>
+         <h2 class="product-title">Jenifer Watch</h2>
+         <p class="product-decription">
+           A beautiful watches for mens & womens</p>
+            <p class="price">
+            Rs 200/-
+            </p>
+           <div class="guantity-btn-container">
+            <img src="minus.png" class="btn-quantity" onclick="dec()"/>
+
+            <span class="quantity" id="quantity-text">1</span>
+
+            <img src="plus (1).png" class="btn-quantity" onclick="inc()"/>
+            </div>
+         <button class="product-btn">Buy now</button>  
+         <button class="product-btn">AddToCard</button>      
+    </div>
+      <script>
+        function inc()
+        {
+           const quantityText = document.getElementById('quantity-text');
+           var quantity = (quantityText.innerText);
+
+           quantityText.innerText = ++quantity;
+        }
+        function dec()
+        {
+           const quantityText = document.getElementById('quantity-text');
+           var quantity = (quantityText.innerText);
+
+           quantityText.innerText = --quantity;
+        }
+      </script>
+</body>
+</html>
+    
